@@ -1,0 +1,23 @@
+{
+    "name": "scaventum/tabwire",
+    "description": "Laravel Livewire package which enables adding dynamic and conditional tabs with any Livewire component.",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Scaventum\\Tabwire\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Ryan DJ",
+            "email": "scaventum@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "php": "^8.0|^8.1|^8.2|^8.3",
+        "illuminate/collections": "^10.0|^11.0",
+        "livewire/livewire": "^3.0"
+    }
+}
