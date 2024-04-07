@@ -4,20 +4,26 @@ namespace Scaventum\Wiretab\Configs;
 
 use Illuminate\Support\Collection;
 use Livewire\Wireable;
+use RuntimeException;
 
 class Tabs implements Wireable
 {
     private function __construct(
+        public string $id,
         public Collection $tabs,
-        public string $activeTab,
+        public ?string $activeTab,
     ) {
     }
 
+    
     /**
      * Set active tab and return this instance
      */
-    public static function make(...$tabs): static
+    public static function make(string $id, array $tabs): static
     {
+        // Validate tabs existence
+        throw_if(empty($tabs), new RuntimeException('At least one Scaventum\Wiretab\Configs\Tab::class instance must exists.'));
+
         /**
          * Set current active tab.
          * If no active tab found, set the default to active
@@ -25,7 +31,7 @@ class Tabs implements Wireable
         $tabsCollection = collect($tabs);
         $activeTab = static::getActiveTab($tabsCollection);
 
-        return new static(Collection::make($tabs), $activeTab);
+        return new static($id, Collection::make($tabs), $activeTab);
     }
 
     /**
@@ -43,6 +49,7 @@ class Tabs implements Wireable
     public function toLivewire()
     {
         return [
+            'id' => $this->id,
             'tabs' => $this->tabs,
             'activeTab' => $this->activeTab,
         ];
@@ -50,9 +57,10 @@ class Tabs implements Wireable
 
     public static function fromLivewire($value)
     {
+        $id = $value['id'];
         $tabs = $value['tabs'];
         $activeTab = $value['activeTab'];
 
-        return new static($tabs, $activeTab);
+        return new static($id, $tabs, $activeTab);
     }
 }
