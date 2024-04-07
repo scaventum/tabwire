@@ -1,6 +1,6 @@
 <?php
 
-namespace Scaventum\Wiretab\Configs;
+namespace Scaventum\Tabwire\Configs;
 
 use Illuminate\Support\Collection;
 use Livewire\Wireable;
@@ -22,7 +22,7 @@ class Tabs implements Wireable
     public static function make(string $id, array $tabs): static
     {
         // Validate tabs existence
-        throw_if(empty($tabs), new RuntimeException('At least one Scaventum\Wiretab\Configs\Tab::class instance must exists.'));
+        throw_if(empty($tabs), new RuntimeException('At least one Scaventum\Tabwire\Configs\Tab::class instance must exists.'));
 
         /**
          * Set current active tab.

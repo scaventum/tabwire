@@ -1,8 +1,8 @@
 <?php
 
-namespace Scaventum\Wiretab\Traits;
+namespace Scaventum\Tabwire\Traits;
 
-use Scaventum\Wiretab\Configs\Tabs;
+use Scaventum\Tabwire\Configs\Tabs;
 
 trait HasTabs
 {

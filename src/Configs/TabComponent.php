@@ -1,6 +1,6 @@
 <?php
 
-namespace Scaventum\Wiretab\Configs;
+namespace Scaventum\Tabwire\Configs;
 
 use Livewire\Wireable;
 
