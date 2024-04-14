@@ -81,11 +81,11 @@ Laravel Livewire package which enables adding dynamic and conditional tabs withi
   <!-- Render tabs links -->
   <div>@include('tabwire::components.links', ['tabs' => $tabs])</div>
 
-  <!-- Render tabs contents -->
-  <div>@include('tabwire::components.contents', ['tabs' => $tabs])</div>
+  <!-- Render tabs content -->
+  <div>@include('tabwire::components.content', ['tabs' => $tabs])</div>
   ```
 
-  Tabs links and contents can be placed on any element you want in the view file.
+  Tabs links and content can be placed on any element you want in the view file.
 
 ## Options
 
@@ -122,15 +122,15 @@ Laravel Livewire package which enables adding dynamic and conditional tabs withi
   - On its Livewire view file, include multiple of these blade views:
 
     ```html
-    <!-- Render tabs links and contents of upper tabs-->
+    <!-- Render tabs links and content of upper tabs-->
     <div>@include('tabwire::components.links', ['tabs' => $upperTabs])</div>
-    <div>@include('tabwire::components.contents', ['tabs' => $upperTabs])</div>
+    <div>@include('tabwire::components.content', ['tabs' => $upperTabs])</div>
 
     ...
 
-    <!-- Render tabs links and contents of lower tabs-->
+    <!-- Render tabs links and content of lower tabs-->
     <div>@include('tabwire::components.links', ['tabs' => $lowerTabs])</div>
-    <div>@include('tabwire::components.contents', ['tabs' => $lowerTabs])</div>
+    <div>@include('tabwire::components.content', ['tabs' => $lowerTabs])</div>
     ```
 
 ## License
