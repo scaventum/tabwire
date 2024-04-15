@@ -3,33 +3,32 @@
 use Scaventum\Tabwire\Configs\Tab;
 
 beforeEach(function () {
-    $this->tab = Tab::make(id:'tab');
+    $this->tab = Tab::make(id: 'tab');
 });
 
-test('tab class instantiated', function () {
+it('instantiates tab class', function () {
     expect($this->tab)->toBeInstanceOf(Tab::class);
 });
 
-
-test('tab has id', function () {
+it('returns tab id', function () {
     expect($this->tab->id)->toBe('tab');
 });
 
-test('tab is enabled', function () {
+it('returns tab enabled as true', function () {
     expect($this->tab->enabled)->toBeTrue();
 });
 
-test('tab is not enabled', function () {
+it('sets tab as disabled', function () {
     $this->tab->enable(false);
 
     expect($this->tab->enabled)->toBeFalse();
 });
 
-test('tab is not set as default', function () {
+it('returns tab default as false', function () {
     expect($this->tab->default)->toBeFalse();
 });
 
-test('tab is set as default', function () {
+it('sets tab as default', function () {
     $this->tab->setAsDefault();
 
     expect($this->tab->default)->toBeTrue();

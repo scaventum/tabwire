@@ -15,7 +15,6 @@ class Tabs implements Wireable
     ) {
     }
 
-    
     /**
      * Set active tab and return this instance
      */

@@ -29,7 +29,8 @@
         "spatie/laravel-package-tools": "^1.0"
     },
     "require-dev": {
-        "pestphp/pest": "3.x-dev"
+        "pestphp/pest": "3.x-dev",
+        "laravel/pint": "dev-main"
     },
     "config": {
         "allow-plugins": {

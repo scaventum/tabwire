@@ -1,4 +1,5 @@
 <?php
+
 namespace Scaventum\Tabwire\Configs;
 
 use Livewire\Wireable;
