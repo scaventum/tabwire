@@ -27,5 +27,13 @@
         "illuminate/collections": "^10.0|^11.0",
         "livewire/livewire": "^3.0",
         "spatie/laravel-package-tools": "^1.0"
+    },
+    "require-dev": {
+        "pestphp/pest": "3.x-dev"
+    },
+    "config": {
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        }
     }
 }
